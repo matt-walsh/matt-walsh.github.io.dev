@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../../../app.component';
 
 @Component({
   moduleId:module.id,
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: 'about.component.html'
 })
 export class AboutComponent {
-
+  constructor(private appComponent: AppComponent){
+    this.appComponent.setPageTitle("About");
+  }
 }

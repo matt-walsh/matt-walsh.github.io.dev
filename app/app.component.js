@@ -8,19 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(titleService) {
+        this.titleService = titleService;
+        this.pageTitle = "Matt Walsh Github Page - ";
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'my-app',
-            templateUrl: 'app.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
+    AppComponent.prototype.setPageTitle = function (subtitle) {
+        this.titleService.setTitle(this.pageTitle + subtitle);
+    };
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'my-app',
+        templateUrl: 'app.component.html'
+    }),
+    __metadata("design:paramtypes", [platform_browser_1.Title])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

@@ -8,19 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AboutComponent = (function () {
-    function AboutComponent() {
+var core_1 = require("@angular/core");
+var app_component_1 = require("../../../app.component");
+var HomeComponent = (function () {
+    function HomeComponent(appComponent) {
+        this.appComponent = appComponent;
+        this.appComponent.setPageTitle("Home");
     }
-    AboutComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'about',
-            templateUrl: 'about.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AboutComponent);
-    return AboutComponent;
+    return HomeComponent;
 }());
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+HomeComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'home',
+        templateUrl: 'home.component.html'
+    }),
+    __metadata("design:paramtypes", [app_component_1.AppComponent])
+], HomeComponent);
+exports.HomeComponent = HomeComponent;
+//# sourceMappingURL=home.component.js.map

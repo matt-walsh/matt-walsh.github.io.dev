@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../../../app.component';
 
 @Component({
   moduleId:module.id,
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: 'home.component.html'
 })
 export class HomeComponent {
+  constructor(private appComponent: AppComponent){
+    this.appComponent.setPageTitle("Home");
+  }
 
+  
 }

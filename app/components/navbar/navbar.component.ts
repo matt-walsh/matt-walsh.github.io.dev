@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: 'navbar.component.html'
 })
 export class NavbarComponent {
-    branding = 'MyWebsite';
+    branding = 'Matt Walsh';
 }
