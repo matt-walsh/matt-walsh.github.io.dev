@@ -1,0 +1,55 @@
+<div *ngIf="user">
+    <div class="panel panel-default no-border">
+        <!--Panel Header-->
+        <div class="panel-heading">
+            <h3>Public GitHub Repositories</h3>
+            <div class="row">
+                <div class=col-md-12>
+                <span class = "label profile-label">Total Repositories: 0</span>
+                <a href="https://github.com/matt-walsh?tab=stars" class="label profile-label" target="_blank" rel="noopener">Starred Repos: {{starred}}</a>
+                <a href="https://github.com/matt-walsh?tab=followers" class="label profile-label" target="_blank" rel="noopener">Followers: {{user.followers}}</a>
+                <a href="https://github.com/matt-walsh?tab=following" class="label profile-label" target="_blank" rel="noopener">Following: {{user.following}}</a>
+                </div>
+            </div>
+        </div>
+        <!--Panel Body-->
+        <div class="panel-body">
+            <div *ngFor="let repo of repos">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>
+                            <a href="{{repo.html_url}}" target="_blank" rel="noopener">{{repo.name}}</a>
+                            <span *ngIf="repo.stargazers_count >= 1" class="glyphicon glyphicon-star"></span>
+                        </h4>
+                        <h5 class="italics">Language: {{repo.language}}</h5>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <span class="label profile-label">File Count: {{repo.size}}</span>
+                        <span class="label profile-label">Watchers: {{repo.watchers}}</span>
+                        <a href="{{repo.html_url}}/network" class="label profile-label">Forks: {{repo.forks}}</a>
+                        <a href="{{getIssuesURL(repo.issues_url)}}" class="label profile-label">Issues: {{repo.open_issues}}</a>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>{{repo.description}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="italics text-left">Created: {{getFormattedDate(repo.created_at)}}</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="italics text-center">Updated: {{getFormattedDate(repo.updated_at)}}</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="italics text-right">Last Commit: {{getFormattedDate(repo.pushed_at)}}</h5>
+                    </div>
+
+                </div>
+                <div class="seperation"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

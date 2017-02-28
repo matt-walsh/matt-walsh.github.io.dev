@@ -1,0 +1,40 @@
+h1{
+  color: #ffffff;
+}
+
+.glyphicon-star{
+  color: #C79A00;
+}
+
+.profile-label{
+  background-color: #5891AB;
+  font-size: 102%;
+}
+
+.italics{
+  font-size: 85%;
+  font-style: italic;
+}
+
+
+a.profile-label:hover,
+a.profile-label:focus{
+  background-color: #81D4FA;
+}
+
+.panel-body{
+  background-color:#EEEEEE;
+}
+
+.panel-default > .panel-heading{
+  background-color:#369;
+}
+
+.no-border{
+  border-style: none;
+}
+
+.seperation{
+  padding-bottom: 1%;
+  border-top-style: solid;
+}

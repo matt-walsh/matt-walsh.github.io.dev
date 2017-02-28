@@ -4,7 +4,8 @@ import { AppComponent } from '../../../app.component';
 @Component({
   moduleId:module.id,
   selector: 'about',
-  templateUrl: 'about.component.html'
+  templateUrl: 'about.component.html',
+  styleUrls: ['about.component.css']
 })
 export class AboutComponent {
   constructor(private appComponent: AppComponent){

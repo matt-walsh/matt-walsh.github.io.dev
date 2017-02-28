@@ -13,7 +13,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var AppComponent = (function () {
     function AppComponent(titleService) {
         this.titleService = titleService;
-        this.pageTitle = "Matt Walsh Github Page - ";
+        this.pageTitle = "Matt Walsh - ";
     }
     AppComponent.prototype.setPageTitle = function (subtitle) {
         this.titleService.setTitle(this.pageTitle + subtitle);

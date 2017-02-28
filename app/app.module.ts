@@ -1,33 +1,37 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import {AppComponent} from './app.component';
 
-import {NavbarComponent} from './components/navbar/navbar.component';
-import {JumbotronComponent} from './components/jumbotron/jumbotron.component';
-import { HomeComponent} from './components/pages/home/home.component'
-import { AboutComponent} from './components/pages/about/about.component'
-import { MissingComponent} from './components/pages/missing/missing.component'
-import { ContactComponent } from './components/pages/contact/contact.component'
+import { NavbarComponent} from './components/navbar/navbar.component';
+import { HomeComponent} from './components/pages/home/home.component';
+import { AboutComponent} from './components/pages/about/about.component';
+import { GithubComponent } from './components/pages/github/github.component';
+import { MissingComponent} from './components/pages/missing/missing.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+
+import { GithubService } from './services/github/github.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'github', component: GithubComponent },
   { path: '**', component: MissingComponent }
 ];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes) ],
+  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule ],
   declarations: [ AppComponent, 
-                  NavbarComponent, 
-                  JumbotronComponent,
+                  NavbarComponent,
                   HomeComponent,
                   AboutComponent,
+                  GithubComponent,
                   ContactComponent,
                   MissingComponent ],
-  providers: [ Title ],
+  providers: [ Title, GithubService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {

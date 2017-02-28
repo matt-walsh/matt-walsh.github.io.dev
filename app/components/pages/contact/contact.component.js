@@ -21,7 +21,8 @@ ContactComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'contact',
-        templateUrl: 'contact.component.html'
+        templateUrl: 'contact.component.html',
+        styleUrls: ['contact.component.css']
     }),
     __metadata("design:paramtypes", [app_component_1.AppComponent])
 ], ContactComponent);

@@ -1,0 +1,166 @@
+/*General Styling*/
+h1{
+    color: #424242;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2{
+    color: #424242;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3{
+    color: #424242;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+p{
+    color: #424242;
+    font-size: 1em;
+}
+
+.skills-table{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.col-md-3{
+    height: 15em;
+    border: .1em solid white;
+    box-sizing: border-box;
+}
+
+.panel-label{
+    display: block;
+    width: 100%;
+}
+
+/*Skill Tile Effects*/
+.panel-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.panel-text{
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.panel-label .panel-text{
+    font-size: 1.3em;
+}
+
+.col-md-3:hover .panel-overlay{
+    opacity: 1;
+}
+
+/* alternating tile colors*/
+
+.skills-table:nth-child(odd) .col-md-3:nth-child(odd){
+    background-color: #369;
+}
+
+.skills-table:nth-child(odd) .col-md-3:nth-child(even){
+    background-color: cornflowerblue;
+}
+
+.skills-table:nth-child(even) .col-md-3:nth-child(odd){
+    background-color: cornflowerblue;
+}
+
+.skills-table:nth-child(even) .col-md-3:nth-child(even){
+    background-color: #369;
+}
+
+/*Education List Effects*/
+.expand-toggle{
+    opacity: 0;
+    float: left;
+}
+
+.education-title h2{
+    line-height: 0.5em;
+}
+.education-title h3{
+    line-height: 0.5em;
+}
+
+.education-details .row{
+    background-color: #fff;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom:5%;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.label-style{
+    background-color:#369;
+    user-select: none;
+    color:#fff;
+    cursor: default;
+    float:left;  
+}
+
+/*Begin Programming Education Section*/
+.prog-section{
+    display: block;
+}
+
+#prog-toggle:checked + #prog-label::after{
+    content: " - ";
+}
+
+#prog-toggle + #prog-label::after{
+    content: " + ";
+}
+
+#prog-details{
+    display: none;
+}
+
+#prog-toggle:checked ~ #prog-details{
+    display: inline-block;
+}
+
+/*End Programming Education Section*/
+
+/*Begin CET Education Section*/
+.cet-section{
+    display: block;
+}
+
+#cet-toggle:checked + #cet-label::after{
+    content: " - ";
+}
+
+#cet-toggle + #cet-label::after{
+    content: " + ";
+}
+
+#cet-details{
+    display: none;
+}
+
+#cet-toggle:checked ~ #cet-details{
+    display: inline-block;
+}
+/*End CET Education Section*/
+

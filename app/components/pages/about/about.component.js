@@ -21,7 +21,8 @@ AboutComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'about',
-        templateUrl: 'about.component.html'
+        templateUrl: 'about.component.html',
+        styleUrls: ['about.component.css']
     }),
     __metadata("design:paramtypes", [app_component_1.AppComponent])
 ], AboutComponent);

@@ -1,0 +1,40 @@
+h2{
+    font-size: 18px;
+}
+
+h3{
+    font-style: italic;
+    font-size: 14px;
+}
+
+.profile-img{
+    overflow: auto;
+    padding: 1%;
+    padding-top: 0%;
+}
+
+.heading blockquote{
+    font-family: Georgia, serif;
+    font-size: 18pt;
+    font-style: bold;
+    width: 50%;
+    margin: 0.25em 0;
+    padding: 0.25em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+}
+
+.heading blockquote cite{
+    font-size: 12pt;
+    padding-left:1%;
+    font-style: italic;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float:right;
+}
