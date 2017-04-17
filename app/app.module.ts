@@ -15,8 +15,8 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { GithubService } from './services/github/github.service';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  //{ path: '', component: HomeComponent },
+  { path: '', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'github', component: GithubComponent },
   { path: '**', component: MissingComponent }
@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule ],
   declarations: [ AppComponent, 
                   NavbarComponent,
-                  HomeComponent,
+                  //HomeComponent,
                   AboutComponent,
                   GithubComponent,
                   ContactComponent,

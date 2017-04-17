@@ -2,6 +2,7 @@
   "name": "matt-walsh.github.io",
   "version": "0.0.0",
   "scripts": {
+    "install":"node build",
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
     "postinstall": "typings install",

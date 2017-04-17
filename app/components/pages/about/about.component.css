@@ -1,6 +1,6 @@
 /*General Styling*/
 h1{
-    color: #424242;
+    color: #369;
     font-size: 2em;
     font-weight: bold;
 }
@@ -20,12 +20,9 @@ h3{
 p{
     color: #424242;
     font-size: 1em;
+    padding:2em;
 }
 
-.skills-table{
-    padding-left: 10%;
-    padding-right: 10%;
-}
 
 .col-md-3{
     height: 15em;
@@ -41,29 +38,35 @@ p{
 /*Skill Tile Effects*/
 .panel-overlay{
     position: absolute;
+    font-size: 0.5em;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: #008CBA;
 }
 
+
+.panel-text p{
+    color: white;
+}
+
+.panel-text a{
+    text-decoration: underline;
+}
+.panel-text a{
+    color: white;
+}
 .panel-text{
     color: white;
-    font-size: 1em;
+    font-size: 1.3em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-}
-
-.panel-label .panel-text{
-    font-size: 1.3em;
 }
 
 .col-md-3:hover .panel-overlay{
@@ -92,13 +95,6 @@ p{
 .expand-toggle{
     opacity: 0;
     float: left;
-}
-
-.education-title h2{
-    line-height: 0.5em;
-}
-.education-title h3{
-    line-height: 0.5em;
 }
 
 .education-details .row{

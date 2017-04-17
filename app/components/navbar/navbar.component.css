@@ -36,3 +36,7 @@
 #navbar-item.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #336699;
 }
+
+.navbar-brand{
+    font-size: 2em;
+}
